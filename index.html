@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Our Family as an Evening Helper · Presidio, SF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F3;
+    --warm-white: #FFFEFB;
+    --sage: #5C7A5E;
+    --sage-light: #EBF0EB;
+    --sage-mid: #8FAF91;
+    --ink: #1E1E1B;
+    --ink-soft: #4A4A45;
+    --ink-muted: #8A8A82;
+    --border: rgba(92,122,94,0.18);
+    --border-soft: rgba(30,30,27,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 80px 24px 72px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(92,122,94,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--sage-light);
+    color: var(--sage);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge::before { content: '📍'; font-size: 11px; }
+
+  .hero h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(36px, 6vw, 58px);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+    max-width: 640px;
+    margin: 0 auto 20px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--sage);
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+  }
+
+  .hero-emojis {
+    font-size: 36px;
+    margin-bottom: 24px;
+    display: block;
+    letter-spacing: 4px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--sage);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 32px;
+    border-radius: 40px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: #4a6a4c; transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  /* CONTENT */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .content {
+    padding: 72px 0 80px;
+  }
+
+  /* SECTION CARDS */
+  .section-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 24px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--sage-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-header h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .section-card p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .section-card p:last-child { margin-bottom: 0; }
+
+  /* TASK LIST */
+  .task-list {
+    list-style: none;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  @media (max-width: 540px) { .task-list { grid-template-columns: 1fr; } }
+
+  .task-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    padding: 10px 14px;
+    background: var(--cream);
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+  }
+
+  .task-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--sage-mid);
+    flex-shrink: 0;
+  }
+
+  /* DETAILS STRIP */
+  .details-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 24px 0 0;
+  }
+
+  @media (max-width: 540px) { .details-strip { grid-template-columns: 1fr; } }
+
+  .detail-item {
+    text-align: center;
+    padding: 20px 12px;
+    background: var(--cream);
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+  }
+
+  .detail-item .detail-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .detail-item .detail-value {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .detail-item .detail-sub {
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-top: 3px;
+  }
+
+  /* NOTE */
+  .note {
+    border-left: 3px solid var(--sage);
+    padding: 14px 18px;
+    background: var(--sage-light);
+    border-radius: 0 10px 10px 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 20px;
+  }
+
+  /* APPLY CTA */
+  .apply-section {
+    background: var(--warm-white);
+    border: 1px solid var(--border-soft);
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .apply-section h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .apply-section p {
+    color: var(--ink-soft);
+    font-size: 16px;
+    max-width: 420px;
+    margin: 0 auto 32px;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 13px;
+    color: var(--ink-muted);
+    border-top: 1px solid var(--border-soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="hero-emojis">👦🏼 👶🏼</span>
+  <p class="hero-badge">Presidio, San Francisco</p>
+  <h1>Join Our Family as an <em>Evening Helper</em></h1>
+  <p class="hero-sub">We're a warm family of four looking for an extra pair of hands from 5–8pm on weeknights.</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAP-KzJnkRg-IyOyt5zMNtWhJA1pIzK0Ng6m5pp-84CpI7PA/viewform?usp=publish-editor" class="btn-primary" target="_blank" rel="noopener">Apply Now →</a>
+</header>
+
+<main class="content">
+  <div class="container">
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🏡</div>
+        <h2>About Our Family</h2>
+      </div>
+      <p>We are a warm, loving family of four living in the Presidio. We have two sons — our older son is 3 and attends a preschool just a short walk away, and our younger son is 6 weeks old and home during maternity leave.</p>
+      <p>Dad is a doctor and entrepreneur, and Mom is a consultant; we both work from home. We're looking to build a lasting relationship with someone who genuinely loves being around kids.</p>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">⏰</div>
+        <h2>The Role</h2>
+      </div>
+      <p>We need an extra set of hands during dinner and bedtime — typically <strong>5PM to 8PM on weeknights</strong>. We can work with you on which nights, and every evening will look a little different. Tasks might include:</p>
+
+      <ul class="task-list">
+        <li>Walking our preschooler home from school</li>
+        <li>Taking the kids to the park</li>
+        <li>Helping with dinner cleanup</li>
+        <li>Putting away laundry</li>
+        <li>Giving the kids dinner &amp; bath</li>
+        <li>Helping organize toys</li>
+      </ul>
+
+      <div class="note">No serious cooking (beyond toddler-level pasta!), cleaning, or administrative work required. The right person is a fantastic babysitter who can also flex into a family helper role.</div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">✨</div>
+        <h2>Details</h2>
+      </div>
+      <p>We can guarantee a minimum number of hours each week, especially if you're open to weekends. Our overall goal is to build a lasting relationship — not just fill a time slot.</p>
+
+      <div class="details-strip">
+        <div class="detail-item">
+          <div class="detail-label">Hours</div>
+          <div class="detail-value">5–8pm</div>
+          <div class="detail-sub">Weeknights (flexible)</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Location</div>
+          <div class="detail-value">Presidio</div>
+          <div class="detail-sub">San Francisco, CA</div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-label">Parking</div>
+          <div class="detail-value">Free</div>
+          <div class="detail-sub">Safe on-site parking</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <div class="section-header">
+        <div class="section-icon">🚗</div>
+        <h2>Requirements</h2>
+      </div>
+      <p>Given our location, <strong>a vehicle is required</strong>. We have free, safe parking available. We also ask that candidates have a background check on file via Care.com, UrbanSitter, or a similar platform.</p>
+    </div>
+
+    <div class="apply-section">
+      <h2>Sounds like a fit?</h2>
+      <p>Fill out a quick application and we'll be in touch soon. We'd love to meet you!</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAP-KzJnkRg-IyOyt5zMNtWhJA1pIzK0Ng6m5pp-84CpI7PA/viewform?usp=publish-editor" class="btn-primary" target="_blank" rel="noopener">Apply Now →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>Questions? We'll answer everything through the application form. Thank you for your interest!</p>
+</footer>
+
+</body>
+</html>
